@@ -1,0 +1,2 @@
+* Generally, "low-level" languages are more concerned with performance, whereas "high-level" languages allow for greater abstraction.
+* The difference is usually one of memory management. Most other differences that we will discuss today stem from memory management.
