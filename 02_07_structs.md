@@ -26,4 +26,4 @@ let triv = Trivial;
 ```
 
 # Exercise
-Create struct that represents a rectangle. Implement two functions, one to create a rectangle with a width and height, and one to calculate a giver rectangle's area.
+Create struct that represents a rectangle. Implement two functions, one to create a rectangle with a width and height, and one to calculate a givern rectangle's area.

@@ -1,4 +1,5 @@
 A program's memory is divided into 4 sections, and the program can alter them in different ways:
+
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Program_memory_layout.pdf/page1-234px-Program_memory_layout.pdf.jpg)
 * code segment/text
   * This is where the CPU instructions are stored for the program

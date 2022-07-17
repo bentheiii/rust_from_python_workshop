@@ -21,5 +21,5 @@
   }
   ```
 
-# Excercise
+# Exercise
 Create a function "seven_boom", that returns `true` if a number is divisible by 7 or has 7 in its digits.
