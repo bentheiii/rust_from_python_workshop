@@ -6,7 +6,7 @@ given the following enum
 ```rust
 enum Nested {
     Value(i32),
-    List(Vec<NestedList>),
+    List(Vec<Nested>),
 }
 ```
 

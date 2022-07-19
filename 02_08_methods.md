@@ -41,3 +41,6 @@ impl Rectangle {
     }
 }
 ```
+
+# Question
+Why would we want to create a constructor in this case?
