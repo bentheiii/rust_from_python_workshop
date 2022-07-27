@@ -14,16 +14,17 @@ todo:
   * [ ] eq/partialeq
   * [ ] into/from
   * [ ] operators
-* [ ] constant patterns
-* [ ] union
-* [ ] if let
-* [ ] match
+* [X] constant patterns
+* [X] union
+* [X] if let
+* [X] match
 * [ ] generics
 * [ ] lifetimes
 * [ ] closures
-* [ ] derive
+* [X] derive
 * [ ] iterators
 * [ ] smart pointers
+* [ ] COW
 * [ ] polymorphism
 * [ ] type inference
 * [ ] backwards type inference

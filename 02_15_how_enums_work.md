@@ -18,4 +18,5 @@
   if let None = my_optional{ // this comparison checks only the tag
     ...
   }
+  ```
 * In most cases, an `enum` will require as much space as its largest variant, plus the size of the tag.

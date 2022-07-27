@@ -26,6 +26,7 @@ impl Rectangle {
 fn main() {
     let rect = Rectangle::new(13, 21);
     println!("our rectangle has area {} and perimeter {}", rect.area(), rect.perimeter())
+    // our rectangle has area 273 and perimeter 68
 }
 ```
 

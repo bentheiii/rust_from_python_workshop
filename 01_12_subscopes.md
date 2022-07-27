@@ -6,9 +6,9 @@ fn foo(){
     { // this new scope opens a new "layer" in our stack
         let x = 7;
         let y = 10;
-        // x is 7 here
+        assert_eq!(x, 7);
     } // y and the inner x is removed now
-    // x is 5 here
+    assert_eq!(x, 5);
     // y is no longer accessible here
 }
 ```
@@ -31,6 +31,7 @@ let sum_of_squares_up_to_n = {
     }
     m // this is our scope's return value
 };
+assert_eq!(sum_of_squares_up_to_n, 385)
 ```
 
 In truth, our expression doesn't have to be last, it just has to be final

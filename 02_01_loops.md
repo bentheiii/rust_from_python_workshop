@@ -14,7 +14,7 @@
   ```
 
 # Exercise 1
-The collatz sequence for a given number is a generating dequence with the following rules depending on the previous value `n`:
+The collatz sequence for a given number is a generating sequence with the following rules depending on the previous value `n`:
 * if `n` is even, the next item is `n/2`
 * if `n` is odd, the next item is `n*3 + 1`
 * if `n` is 1, the sequence ends

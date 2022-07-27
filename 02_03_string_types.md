@@ -8,7 +8,7 @@ let s1 = "banana";
 let s2 = "banana";
 let p1 = s1.as_ptr();
 let p2 = s2.as_ptr();
-println!("{p1:?}, {p2:?}");
+assert_eq!(p1, p2);
 ```
 
 # Exercise 1

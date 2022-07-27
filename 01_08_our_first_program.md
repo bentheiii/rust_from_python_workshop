@@ -11,4 +11,8 @@ enough talk, let's install rust!
     println!("Hello, world!");
   }
   ```
+  output:
+  ```
+  Hello, world!
+  ```
 * build and run with `cargo run`

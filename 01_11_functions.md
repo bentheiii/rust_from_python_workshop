@@ -4,6 +4,10 @@
       println!("Hello!");
   }
   ```
+  output:
+  ```
+  Hello!
+  ```
 * since rust is a statically typed language, all our parameters, as well as our output type, if any, must be specified in our signature.
   ```rust
   fn square(x: i32)->i32 {

@@ -3,7 +3,7 @@
     ```rust
     let x = 3;
     let ref_to_x: &i32 = &x;  // no copying takes place
-    println!("{ref_to_x:?}");
+    println!("{ref_to_x:?}");  // 3
     ```
 
 * References can also be mutable, that allows us to mutate the value
@@ -12,7 +12,7 @@
     let mut x = 3;
     let ref_to_x = &mut x;
     *ref_to_x = 10;
-    println!("{x:?}");
+    println!("{x:?}");  // 10
     ```
 
 * in most cases, you can shortcut the deref (`*`)
@@ -21,13 +21,13 @@
     let mut x = vec![1,2,3,4,5];
     let ref_to_x = &mut x;
     ref_to_x.push(6);
-    println!("{x:?}");
+    println!("{x:?}");  // [1,2,3,4,5,6]
     ```
 
 * references are especially useful in functions, where we want to accept values without copying them
     
     ```rust
-    fn is_number(s: &String){
+    fn is_number(s: &[u8; 1024]){
         ...
     }
     ```

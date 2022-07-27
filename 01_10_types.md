@@ -27,3 +27,8 @@ Common data types in rust:
   let x: () = println!("15");
   println!("{x:?}")
   ```
+  output:
+  ```
+  15
+  ()
+  ```

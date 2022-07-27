@@ -19,8 +19,10 @@ variables in rust
   for i in 1..=10 {
       x += i;
   }
+  assert_eq!(x, 55);
   ```
 * again, since rust is a functional language, this can be made more readable with an immutable `x`
   ```rust
   let x: i32 = (1..=10).sum();
+  assert_eq!(x, 55);
   ```

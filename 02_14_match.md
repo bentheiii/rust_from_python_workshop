@@ -15,7 +15,7 @@
     }
   }
   ```
-* we can avoid these snippets with the `match` statement
+* we can avoid having to use `unreachable!` with the `match` statement
   ```rust
   fn my_func(foo: &Foo){
     match foo{
