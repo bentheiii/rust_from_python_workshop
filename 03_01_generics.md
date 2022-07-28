@@ -16,7 +16,7 @@
     }
   }
 
-  fn select_float(a: String, b: String, idx: u8)->String{
+  fn select_float(a: f64, b: f64, idx: u8)->f64{
     if idx == 0{
         a
     } else {
@@ -66,7 +66,7 @@
     }
   }
   ```
-* we can also make impls fro specific specializations
+* we can also make impls for specific specializations
   ```rust
   impl Nested<usize>{
     fn total(&self)->usize{

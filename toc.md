@@ -7,7 +7,7 @@ todo:
 * [X] borrowing
 * [X] structs
 * [X] impls
-* [ ] traits
+* [X] traits
   * [ ] display/debug
   * [ ] copy/clone
   * [ ] default
@@ -18,7 +18,7 @@ todo:
 * [X] union
 * [X] if let
 * [X] match
-* [ ] generics
+* [X] generics
 * [ ] lifetimes
 * [ ] closures
 * [X] derive
@@ -32,3 +32,10 @@ todo:
 * [ ] serde
 * [ ] PYO3
 * [ ] tests
+* [ ] const generics
+* [ ] dynamic dispatch
+* [ ] generic traits
+* [ ] generic return types
+* [X] multiple trait constraints
+* [X] trait inheritance
+* [X] blanket implementations
