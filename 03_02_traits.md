@@ -1,7 +1,7 @@
 For now, our generics are pretty limited, we can't make any assumptions about our generic types.
 
 ```rust
-fn print_twice<T>(item: T){
+fn print_twice<T>(x: T){
     println!("{x}, {x}");  // this will fail
 }
 ```
