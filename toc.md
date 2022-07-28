@@ -8,12 +8,12 @@ todo:
 * [X] structs
 * [X] impls
 * [X] traits
-  * [ ] display/debug
-  * [ ] copy/clone
-  * [ ] default
-  * [ ] eq/partialeq
-  * [ ] into/from
-  * [ ] operators
+  * [X] display/debug
+  * [X] copy/clone
+  * [X] default
+  * [X] eq/partialeq
+  * [X] into/from
+  * [X] operators
 * [X] constant patterns
 * [X] union
 * [X] if let
@@ -34,7 +34,7 @@ todo:
 * [ ] tests
 * [ ] const generics
 * [ ] dynamic dispatch
-* [ ] generic traits
+* [X] generic traits
 * [ ] generic return types
 * [X] multiple trait constraints
 * [X] trait inheritance
