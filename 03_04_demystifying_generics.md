@@ -21,7 +21,7 @@ struct Circle(...)
 impl Perimeter for Circle {...}
 impl Area for Circle {...}
 
-fn efficiency<T: Perimeter + Area>(shape: &T){
+fn efficiency<T: Perimeter + Area>(shape: &T)->f64{
     shape.area()/shape.perimeter()
 }
 
@@ -32,15 +32,15 @@ efficiency(Circle(...));
 
 rust actually turns it into this:
 ```rust
-fn efficiency_rectangle(shape: &Rectangle){
+fn efficiency_rectangle(shape: &Rectangle)->f64{
     shape.area()/shape.perimeter()
 }
 
-fn efficiency_triangle(shape: &Triangle){
+fn efficiency_triangle(shape: &Triangle)->f64{
     shape.area()/shape.perimeter()
 }
 
-fn efficiency_circle(shape: &Circle){
+fn efficiency_circle(shape: &Circle)->f64{
     shape.area()/shape.perimeter()
 }
 
