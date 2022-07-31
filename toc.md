@@ -39,3 +39,4 @@ todo:
 * [X] multiple trait constraints
 * [X] trait inheritance
 * [X] blanket implementations
+* [ ] either

@@ -34,14 +34,12 @@ trait GameState{
 A possible usage of this when solving the [fox-chicken-grain](https://www.mathsisfun.com/chicken_crossing_solution.html) puzzle:
 ```rust
 #[derive(Clone, Debug, Default)]
-struct FoxChickenGrainOkState{
+struct FoxChickenGrainState{
     fox_crossed: bool,
     chicken_crossed: bool,
     grain_crossed: bool,
     man_crossed: bool,
 }
-
-type FoxChickenGrainState = Option<FoxChickenGrainOkState>; // None indicates a loss
 
 #[derive(Clone, Debug)]
 enum FoxChickenGrainMove {
@@ -55,54 +53,43 @@ impl GameState for FoxChickenGrainState{
     type Move = FoxChickenGrainMove;
     
     fn result(&self) -> GameResult{
-        match self{
-            None => GameResult::Loss,
-            Some(FoxChickenGrainOkState{fox_crossed: true, chicken_crossed: true, grain_crossed: true, man_crossed: true})=>GameResult::Victory,
-            _ => GameResult::Undecided,
+        if self.fox_crossed && self.chicken_crossed && self.grain_crossed && self.man_crossed{
+            return GameResult::Victory;
+        }
+        let fox_alone = self.fox_crossed != self.man_crossed;
+        let chicken_alone = self.chicken_crossed != self.man_crossed;
+        let grain_alone = self.grain_crossed != self.man_crossed;
+        if chicken_alone && (fox_alone || grain_alone){
+            GameResult::Loss
+        } else {
+            GameResult::Undecided
         }
     }
 
     fn possible_moves(&self)->Vec<Self::Move>{
-        match self{
-            None => vec![],
-            Some(state)=>{
-                let mut ret = vec![Self::Move::MoveNothing];
-                if state.fox_crossed == state.man_crossed{
-                    ret.push(Self::Move::MoveFox);
-                }
-                if state.chicken_crossed == state.man_crossed{
-                    ret.push(Self::Move::MoveChicken);
-                }
-                if state.grain_crossed == state.man_crossed{
-                    ret.push(Self::Move::MoveGrain);
-                }
-                ret
-            }
+        let mut ret = vec![Self::Move::MoveNothing];
+        if self.fox_crossed == self.man_crossed{
+            ret.push(Self::Move::MoveFox);
         }
+        if self.chicken_crossed == self.man_crossed{
+            ret.push(Self::Move::MoveChicken);
+        }
+        if self.grain_crossed == self.man_crossed{
+            ret.push(Self::Move::MoveGrain);
+        }
+        ret
     }
 
     fn do_move(&self, next_move: Self::Move)->Self{
-        match self{
-            None => None,
-            Some(state)=>{
-                let mut ret = state.clone();
-                ret.man_crossed = !ret.man_crossed;
-                match next_move{
-                    Self::Move::MoveFox => ret.fox_crossed = !ret.fox_crossed,
-                    Self::Move::MoveChicken => ret.chicken_crossed = !ret.chicken_crossed,
-                    Self::Move::MoveGrain => ret.grain_crossed = !ret.grain_crossed,
-                    _ => {}
-                };
-                let fox_left_behind = ret.fox_crossed != ret.man_crossed;
-                let chicken_left_behind = ret.chicken_crossed != ret.man_crossed;
-                let grain_left_behind = ret.grain_crossed != ret.man_crossed;
-                if chicken_left_behind && (fox_left_behind || grain_left_behind){
-                    None
-                } else {
-                    Some(ret)
-                }
-            }
-        }
+        let mut ret = self.clone();
+        ret.man_crossed ^= true;
+        match next_move{
+            Self::Move::MoveFox => ret.fox_crossed ^= true,
+            Self::Move::MoveChicken => ret.chicken_crossed ^= true,
+            Self::Move::MoveGrain => ret.grain_crossed ^= true,
+            _ => {}
+        };
+        ret
     }
 }
 ```
