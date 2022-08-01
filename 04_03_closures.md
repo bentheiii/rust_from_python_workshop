@@ -6,7 +6,7 @@ let func = |x| {x+step}; // this will fail
 let x = apply_many_times(15, 3, func);
 ```
 
-What happened? function pointers cannot capture outsize variables. Any anonymous function that tries to capture one results in a different type called a closure.
+What happened? function pointers cannot capture outsize variables. Any anonymous function that tries to capture an outside variable results in a different type called a closure.
 
 ```
    |
@@ -44,4 +44,4 @@ let x = apply_many_times(15, 3, func);
 ```
 
 # Exercise
-Make the above program work: we want a program which will 50% of the time output 24 (15+3+3+3) and 50% will output 405 (15*3*3*3)
+Make the above program work: we want a program which will 50% of the time output 24 (`15+3+3+3`) and 50% will output 405 (`15*3*3*3`)

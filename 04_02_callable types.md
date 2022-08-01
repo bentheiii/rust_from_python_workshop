@@ -55,3 +55,15 @@ fn main() {
     println!("{x:?}");  // 9
 }
 ```
+
+# Exercise 1
+Create a function that accepts a succession function, an initial item and a number `n`, and returns the first `n` elements in the succession sequence sequence.
+
+for example, if the function is `|n| n*n`, the initial item is `3`, and `n` is `5`, we should get `[3, 9, 81, 6_561, 43_046_721]`
+
+Use this function to create a vector of the first 6 powers of 10.
+
+# Exercise 2 (advanced)
+use the function implemented above to calculate the first 50 fibonacci numbers.
+
+Hint: you need to convert the function's output after it is done.
