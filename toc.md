@@ -20,14 +20,14 @@ todo:
 * [X] match
 * [X] generics
 * [ ] lifetimes
-* [ ] closures
+* [X] closures
 * [X] derive
-* [ ] iterators
+* [X] iterators
 * [ ] smart pointers
 * [ ] COW
 * [ ] polymorphism
-* [ ] type inference
-* [ ] backwards type inference
+* [X] type inference
+* [X] backwards type inference
 * [ ] macros
 * [ ] serde
 * [ ] PYO3
@@ -35,7 +35,7 @@ todo:
 * [ ] const generics
 * [ ] dynamic dispatch
 * [X] generic traits
-* [ ] generic return types
+* [X] generic return types
 * [X] multiple trait constraints
 * [X] trait inheritance
 * [X] blanket implementations
