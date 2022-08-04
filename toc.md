@@ -32,7 +32,7 @@ todo:
 * [ ] serde
 * [ ] PYO3
 * [ ] tests
-* [ ] const generics
+* [X] const generics
 * [ ] dynamic dispatch
 * [X] generic traits
 * [X] generic return types
