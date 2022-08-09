@@ -1,3 +1,69 @@
+# Exercise 1
+
+```rust
+fn next_divisor(x: usize, mut next_to_check: usize)->Option<usize>{
+    loop {
+        let div = x / next_to_check;
+        let rem = x % next_to_check;
+        if rem == 0 {
+            return Some(next_to_check)
+        } else if div < next_to_check {
+            return None
+        } else {
+            next_to_check += 2;
+        }
+    }
+}
+
+fn prime_divisors(mut x: usize)->Vec<usize>{
+    let mut ret = vec![];
+    while x%2 == 0 {
+        x /= 2;
+        ret.push(2);
+    }
+    let mut candidate = 3;
+    while let Some(divisor) = next_divisor(x, candidate){
+        ret.push(divisor);
+        x /= divisor;
+        candidate = divisor;
+    }
+    if x != 1{
+        ret.push(x);
+    }
+    ret
+}
+```
+
+# Exercise 2
+```rust
+enum Nested {
+    Value(i32),
+    List(Vec<Nested>),
+}
+
+fn to_json(value: &Nested)->String {
+    match value{
+        Nested::Value(i) => format!("{i}"),
+        Nested::List(items) => {
+            let mut ret = String::from("[");
+            let mut is_first = true;
+            for item in items{
+                if !is_first{
+                    ret.push_str(", ");
+                } else {
+                    is_first = false;
+                }
+                ret.push_str(&to_json(&item));
+            }
+            ret.push_str("]");
+            ret
+        }
+    }
+}
+```
+
+# Exercise 3 & 4
+
 ```rust
 use std::collections::VecDeque;
 
