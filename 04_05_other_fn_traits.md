@@ -82,7 +82,7 @@ Implement a partial function, that accepts a callable that accepts two arguments
 ```rust
 let original_func = |a,b| a+b*2;
 let partial_func = partial(original_func, 5); // you need to implement this
-assert_eq!(partial_func(partial_func(10), 5+10*2))
+assert_eq!(partial_func(10), 5+10*2)
 ```
 
 # Exercise 2 (advanced)

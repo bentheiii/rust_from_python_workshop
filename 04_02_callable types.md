@@ -57,7 +57,7 @@ fn main() {
 ```
 
 # Exercise 1
-Create a function that accepts a succession function, an initial item and a number `n`, and returns the first `n` elements in the succession sequence sequence.
+Create a function that accepts a succession function, an initial item and a number `n`, and returns the first `n` elements in the succession sequence.
 
 for example, if the function is `|n| n*n`, the initial item is `3`, and `n` is `5`, we should get `[3, 9, 81, 6_561, 43_046_721]`
 
