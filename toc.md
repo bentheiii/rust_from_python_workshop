@@ -19,13 +19,13 @@ todo:
 * [X] if let
 * [X] match
 * [X] generics
-* [ ] lifetimes
+* [X] lifetimes
 * [X] closures
 * [X] derive
 * [X] iterators
-* [ ] smart pointers
-* [ ] COW
-* [ ] polymorphism
+* [X] smart pointers
+* [X] COW
+* [X] polymorphism
 * [X] type inference
 * [X] backwards type inference
 * [ ] macros
@@ -33,7 +33,7 @@ todo:
 * [ ] PYO3
 * [ ] tests
 * [X] const generics
-* [ ] dynamic dispatch
+* [X] dynamic dispatch
 * [X] generic traits
 * [X] generic return types
 * [X] multiple trait constraints
