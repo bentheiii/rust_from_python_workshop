@@ -28,10 +28,11 @@ todo:
 * [X] polymorphism
 * [X] type inference
 * [X] backwards type inference
-* [ ] macros
+* [X] decl macros
+* [ ] proc macros
 * [ ] serde
 * [ ] PYO3
-* [ ] tests
+* [X] tests
 * [X] const generics
 * [X] dynamic dispatch
 * [X] generic traits

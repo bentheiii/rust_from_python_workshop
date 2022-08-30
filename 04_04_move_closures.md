@@ -33,7 +33,7 @@ Note that after a `move` closure has captured a variable that does not implement
 ```rust
 let items = vec![1,2,1,3,7];
 let f = move |a| items.len() * a;
-println!("{}", f(0));
+println!("{}", f(0)); // 0
 println!("{items:?}"); // this will fail
 ```
 

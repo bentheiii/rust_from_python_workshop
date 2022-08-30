@@ -29,7 +29,7 @@ let longest = {
     longest_slice(&v0, &v1)
 };
 
-println!("{longest:?}");  // this wil fail
+println!("{longest:?}");  // this will fail
 ```
 
 output

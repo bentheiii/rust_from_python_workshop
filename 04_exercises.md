@@ -18,4 +18,11 @@ Oscar
 
 # Exercise 2
 
+Implement a function that accepts an iterator an returns an iterator of all the increasing sub-sequences in the iterator
+```
+split_to_increasing([[1,6,2,2,8,11,12,-1,0,2,1]]) == [[1, 6], [2, 2, 8, 11, 12], [-1, 0, 2], [1]]
+```
+
+# Exercise 3
+
 Implement a function that, given in iterator of ordered elements, returns the length of the [longest increasing subsequence](https://en.wikipedia.org/wiki/Longest_increasing_subsequence) in the iterator.
