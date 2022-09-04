@@ -32,8 +32,8 @@ macro_rules! pow{
 }
 
 fn main(){
-    println!("{}", pow!(2i32,3)); // 8
-    println!("{}", pow!(6i32,9, 17)); // 11
+    println!("{}", pow!(2i32, 3)); // 8
+    println!("{}", pow!(6i32, 9, 17)); // 11
 }
 ```
 
@@ -41,7 +41,7 @@ Macros can even recourse
 ```rust
 macro_rules! pow{
     ($a: expr, $b: expr) => {$a.pow($b)};
-    ($a: expr, $b: expr, $c: expr) => {pow!($a, $b)};
+    ($a: expr, $b: expr, $c: expr) => {pow!($a, $b) % $c};
 }
 ```
 
@@ -88,5 +88,5 @@ first_some!(
     {println!("E"); (1==1).then_some(4)},
     {println!("F"); 5},
 )
-// shout return 2, and print A, B, and C
+// should return 2, and print A, B, and C
 ```

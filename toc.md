@@ -29,9 +29,9 @@ todo:
 * [X] type inference
 * [X] backwards type inference
 * [X] decl macros
-* [ ] proc macros
-* [ ] serde
-* [ ] PYO3
+* [X] proc macros
+* [X] serde
+* [X] PYO3
 * [X] tests
 * [X] const generics
 * [X] dynamic dispatch
@@ -40,4 +40,4 @@ todo:
 * [X] multiple trait constraints
 * [X] trait inheritance
 * [X] blanket implementations
-* [ ] either
+* [X] either
